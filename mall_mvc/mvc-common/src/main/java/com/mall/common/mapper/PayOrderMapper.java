@@ -1,0 +1,18 @@
+package com.mall.common.mapper;
+
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.mall.common.domain.po.PayOrder;
+
+/**
+* @author YJH
+* @description 针对表【pay_order】的数据库操作Mapper
+* @createDate 2025-06-16 09:53:33
+* @Entity generator.domain.PayOrder
+*/
+public interface PayOrderMapper extends BaseMapper<PayOrder> {
+
+}
+
+
+
+
