@@ -4,25 +4,21 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <groupId>com.mall</groupId>
+        <groupId>com.mall.root</groupId>
         <artifactId>mall_ddd</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>mall_mvc</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <groupId>com.mall.mvc</groupId>
+    <version>0.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
+    <name>mall_mvc</name>
     <modules>
         <module>mvc-common</module>
         <module>mvc-service</module>
     </modules>
-
-    <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    </properties>
 
 
     <dependencies>
@@ -66,10 +62,6 @@
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
         </dependency>
-<!--        <dependency>-->
-<!--            <groupId>org.redisson</groupId>-->
-<!--            <artifactId>redisson-spring-boot-starter</artifactId>-->
-<!--        </dependency>-->
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>retrofit</artifactId>
@@ -96,28 +88,6 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
         </dependency>
-
-        <!-- 工程模块 -->
-<!--        <dependency>-->
-<!--            <groupId>cn.bugstack</groupId>-->
-<!--            <artifactId>s-pay-mall-domain</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>cn.bugstack</groupId>-->
-<!--            <artifactId>s-pay-mall-infrastructure</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>cn.bugstack</groupId>-->
-<!--            <artifactId>s-pay-mall-types</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>cn.bugstack</groupId>-->
-<!--            <artifactId>s-pay-mall-trigger</artifactId>-->
-<!--        </dependency>-->
-<!--        <dependency>-->
-<!--            <groupId>cn.bugstack</groupId>-->
-<!--            <artifactId>s-pay-mall-api</artifactId>-->
-<!--        </dependency>-->
     </dependencies>
 
 </project>

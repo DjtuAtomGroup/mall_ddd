@@ -1,7 +1,6 @@
-package com.mall.common.mapper;
+package com.mall.infrastruction.dao;
 
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.mall.common.domain.po.PayOrder;
+import com.mall.infrastruction.dao.po.PayOrder;
 
 import java.util.List;
 
@@ -11,7 +10,7 @@ import java.util.List;
 * @createDate 2025-06-16 09:53:33
 * @Entity generator.domain.PayOrder
 */
-public interface PayOrderMapper extends BaseMapper<PayOrder> {
+public interface IOrderDao {
     int insert(PayOrder order);
 
     PayOrder queryUnPayOrder(PayOrder order);
