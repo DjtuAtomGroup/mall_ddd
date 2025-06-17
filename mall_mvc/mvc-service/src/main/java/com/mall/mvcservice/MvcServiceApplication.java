@@ -7,7 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
-@MapperScan(basePackages = "com.mall.common.mapper")
+@MapperScan(basePackages = {"com.mall.common.mapper", "com.mall.common.dao"})
 @EnableScheduling
 @Configurable
 public class MvcServiceApplication {

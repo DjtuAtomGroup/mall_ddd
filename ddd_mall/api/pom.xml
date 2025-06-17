@@ -5,12 +5,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.mall</groupId>
-        <artifactId>mall_mvc</artifactId>
+        <artifactId>ddd_mall</artifactId>
         <version>1.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>mvc-common</artifactId>
+    <artifactId>api</artifactId>
 
     <properties>
         <maven.compiler.source>17</maven.compiler.source>

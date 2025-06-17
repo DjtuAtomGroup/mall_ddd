@@ -11,6 +11,7 @@
     </parent>
 
     <artifactId>mall_mvc</artifactId>
+    <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
     <modules>
         <module>mvc-common</module>
