@@ -6,6 +6,11 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/mall_mvc/mvc-service/pom.xml" />
+        <option value="$PROJECT_DIR$/ddd_mall/domain/pom.xml" />
+        <option value="$PROJECT_DIR$/ddd_mall/infrastruction/pom.xml" />
+        <option value="$PROJECT_DIR$/ddd_mall/pom.xml" />
+        <option value="$PROJECT_DIR$/ddd_mall/application/pom.xml" />
+        <option value="$PROJECT_DIR$/ddd_mall/triggers/pom.xml" />
       </list>
     </option>
     <option name="ignoredFiles">

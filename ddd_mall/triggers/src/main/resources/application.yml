@@ -1,0 +1,4 @@
+project:
+  config:
+    request:
+      prefix: /ddd
