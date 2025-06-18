@@ -5,7 +5,7 @@ import com.mall.domain.order.model.entity.OrderEntity;
 import com.mall.domain.order.model.entity.PayOrderEntity;
 import com.mall.domain.order.model.entity.ShopCartEntity;
 
-
+import java.util.List;
 
 
 /**
@@ -41,4 +41,10 @@ public interface IOrderRepository {
      * @param orderId
      */
     void changeOrderPaySuccess(String orderId);
+
+    List<String> queryUnpaidOrder();
+
+    List<String> queryTimeoutOrder();
+
+    boolean changeOrderClose(String orderId);
 }

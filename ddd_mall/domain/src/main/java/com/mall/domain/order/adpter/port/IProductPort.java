@@ -2,7 +2,7 @@ package com.mall.domain.order.adpter.port;
 
 import com.mall.domain.order.model.entity.ProductEntity;
 
-public interface ProductPort {
+public interface IProductPort {
 
 
     /**

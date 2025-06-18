@@ -5,7 +5,7 @@ import com.alipay.api.AlipayClient;
 import com.alipay.api.request.AlipayTradePayRequest;
 import com.google.protobuf.ServiceException;
 import com.mall.api.dto.req.PrepayOrderReqDto;
-import com.mall.api.service.PayService;
+import com.mall.domain.order.adpter.port.IProductPort;
 import com.mall.domain.order.adpter.repository.IOrderRepository;
 import com.mall.domain.order.model.aggregation.CreateOrderAggregate;
 import com.mall.domain.order.model.entity.PayOrderEntity;
@@ -13,6 +13,7 @@ import com.mall.domain.order.model.valobj.OrderStatusVo;
 import com.mall.domain.order.service.AbstractOrderService;
 import lombok.SneakyThrows;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -27,35 +28,34 @@ public class PayOrderServiceImpl extends AbstractOrderService {
     @Resource
     private AlipayClient alipayClient;
 
-    @Resource
-    private PayService payService;
-
+    @Value("${alipay.notify_url}")
     private String notifyUrl;
 
+    @Value("${alipay.return_url}")
     private String returnUrl;
 
-    public PayOrderServiceImpl(IOrderRepository repository) {
-        super(repository);
+    public PayOrderServiceImpl(IOrderRepository repository, IProductPort productPort) {
+        super(repository, productPort);
     }
 
     @Override
     public void changeOrderPaySuccess(String orderId) {
-
+        repository.changeOrderPaySuccess(orderId);
     }
 
     @Override
     public List<String> queryUnpaidOrder() {
-        return null;
+        return repository.queryUnpaidOrder();
     }
 
     @Override
     public List<String> queryTimeoutOrder() {
-        return null;
+        return repository.queryTimeoutOrder();
     }
 
     @Override
     public boolean changeOrderClose(String orderId) {
-        return false;
+        return repository.changeOrderClose(orderId);
     }
 
 
@@ -68,9 +68,7 @@ public class PayOrderServiceImpl extends AbstractOrderService {
             request.setReturnUrl(returnUrl);
 
             String orderId = params.getOrderId();
-            String productId = params.getProductId();
             String productName = params.getProductName();
-            String userId = params.getUserId();
             BigDecimal totalAmount = params.getTotalAmount();
 
             JSONObject bizContent = new JSONObject();
@@ -99,6 +97,6 @@ public class PayOrderServiceImpl extends AbstractOrderService {
 
     @Override
     protected void doSaveOrder(CreateOrderAggregate params) {
-
+        repository.doSaveOrder(params);
     }
 }
