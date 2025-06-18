@@ -35,6 +35,9 @@ project:
       name: 测试商品
       desc: 这是一个测试商品
       price: 16.8
+  config:
+    request:
+      prefix: /ddd
 
 
 
